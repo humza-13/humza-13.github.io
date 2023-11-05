@@ -19,9 +19,9 @@
     "url": "https://github.com/humza-13/humza-13.github.io/issues"
   },
   "homepage": "https://github.com/humza-13/humza-13.github.io#readme",
-  "description": "",
   "devDependencies": {
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  "description": ""
 }
