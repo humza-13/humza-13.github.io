@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "firebase": "^10.5.2"
+  },
+  "name": "humza-13.github.io",
+  "version": "1.0.0",
+  "main": "firebase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humza-13/humza-13.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/humza-13/humza-13.github.io/issues"
+  },
+  "homepage": "https://github.com/humza-13/humza-13.github.io#readme",
+  "description": "",
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }
