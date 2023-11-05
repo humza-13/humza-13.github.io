@@ -39,12 +39,12 @@
     <main>
       <section id="about">
         <p class="section__text__p1">Get To Know More About</p>
-        <h1 class="title">Dark Taverns</h1>
+        <h1 class="title">Solitaire UP</h1>
         <div class="section-container">
           <div>
           <div class="section__pic-container">
             <img id = "pimage"
-              src="../assets/dt/dt1.png"
+              src="../assets/solitaire-saga/su1.png"
               alt="Profile picture"
               class="about-pic"
             />
@@ -53,45 +53,55 @@
             <button id="next-button" class="custom-arrow-button" style="background-image: url('../assets/next-arrow.png');"></button>
           </div>
           <div class="btn-container">
-            <a href = "https://dt-builder-stagging.s3.amazonaws.com/Builder/index.html">
+            <a href = "https://apps.apple.com/cy/app/solitaire-up-patience-game/id6447605857">
              <button class="btn btn-color-2 project-btn link-btn">
-               Live Demo
+               IOS
              </button>
            </a>
              </div>
+             <div class="btn-container">
+              <a href = "https://play.google.com/store/apps/details?id=com.megarama.solitairesaga&hl=en&gl=US">
+               <button class="btn btn-color-2 project-btn link-btn">
+                 Android
+               </button>
+             </a>
+               </div>
          </div>
        
          
             <div class="text-container">  
               <br>
             <h2>Introduction</h2>
-            <p>Dark Taverns, an immersive MMORPG game, takes players on an exhilarating journey through a mystical world filled with adventures, monsters, and legendary quests. Within this captivating gaming universe, players have the opportunity to not only partake in epic battles but also create a unique space of their own. Dark Taverns Builder, a remarkable sub-module of the game, empowers players to craft and customize their own taverns, transforming their digital assets into Non-Fungible Tokens (NFTs).</p>
+            <p>Solitaire Up is a captivating take on the classic card game, Solitaire, with a unique twist—it's map-based. This innovative approach combines the traditional solitaire mechanics with geographical exploration. As players progress through various maps, they tackle solitaire challenges, each set in a different location. These maps are fetched from a backend server, allowing for an ever-expanding and dynamic gaming experience.</p>
             <br>
       <h2>Key Features</h2>
       <ul>
-          <li><strong>Ownership:</strong> Dark Taverns Builder allows players to take ownership of their very own taverns within the game. These taverns are represented as NFTs, adding a layer of uniqueness and collectibility to the in-game assets.</li>
-          <li><strong>Wallet Integration:</strong> The project seamlessly connects your digital wallet, enabling you to access and manage the NFT taverns you've acquired through the game.</li>
-          <li><strong>Customization:</strong> Players can fully customize their taverns to reflect their personal taste and style. This includes decorating the interior, selecting furniture, and even adjusting the layout of the tavern.</li>
-          <li><strong>Asset Library:</strong> The builder module retrieves a wide array of assets from an AWS bucket. This dynamic system ensures that players have access to a constantly evolving set of assets, allowing them to continually refresh and update their taverns.</li>
-          <li><strong>Expandable Asset Repository:</strong> Dark Taverns Builder ensures that the asset library can be easily expanded by adding new assets to the AWS bucket. This enables a constantly growing selection of items and decor for players to choose from, enhancing their creative possibilities.</li>
-          <li><strong>Built on Unity 3D:</strong> The project is built on the Unity 3D engine, providing a rich and immersive 3D gaming experience. With Unity's powerful physics engine, players can interact with their customized taverns in a dynamic and realistic way.</li>
+          <li><strong>Map-Based Gameplay:</strong> Solitaire Up introduces a map-based concept where each map represents a different location or setting. Players progress through these maps, uncovering solitaire challenges specific to each place.</li>
+          <li><strong>Dynamic Map Fetching:</strong> The game fetches maps and locations from a backend server, ensuring that players always have fresh and engaging environments to explore and play solitaire in.</li>
+          <li><strong>Classic Solitaire Mechanics:</strong> Classic card game experience, providing both seasoned and new players with an engaging and comfortable gameplay experience.</li>
+          <li><strong>Daily Challenges:</strong> The game includes a series of daily challenges with unique and increasingly difficult card layouts.</li>
+          <li><strong>Events and Customization:</strong> Special events that can be customized from the backend server. Each event can feature distinct artwork, creating a truly unique gaming experience.</li>
+          <li><strong>Daily Bonuses:</strong> Players are encouraged to return daily with the promise of special bonuses and rewards.</li>
+          <li><strong>Firebase Remote Config:</strong> I've utilized Firebase Remote Config to easily adjust game parameters and activate or deactivate features without requiring app updates. This flexible approach enhances the player experience and allows for fine-tuning.</li>
+          <li><strong>Monetization with AppLovin:</strong> AppLovin integration ensures effective monetization while maintaining a positive ad experience for players.</li>
       </ul>
 
       <br>
       <h2>Technology Stack</h2>
       <ul>
-          <li>Unity 3D</li>
-          <li>URP</li>
-          <li>AWS (Amazon Web Services)</li>
+          <li>Unity 2D</li>
+          <li>Firebase</li>
+          <li>Applovin</li>
           <li>Asset Bundles</li>
-          <li>Metamask</li>
-          <li>REST APIs</li>
+          <li>Google Analytics</li>
+          <li>Cloud Builds</li>
       </ul>
 
 <br>
       <h2>Platforms</h2>
       <ul>
-          <li>WebGL</li>
+          <li>Android</li>
+          <li>IOS</li>
       </ul>
     <br>
             </div>
@@ -120,7 +130,7 @@
       const nextButton = document.getElementById("next-button");
 
       let currentIndex = 1;
-      const maxIndex = 4; // Set this to the number of images in your folder.
+      const maxIndex = 2; // Set this to the number of images in your folder.
 
       function showImage(index) {
           if (index < 1) {
@@ -128,7 +138,7 @@
           } else if (index > maxIndex) {
               currentIndex = 1;
           }
-          image.src = `../assets/dt/dt${currentIndex}.png`;
+          image.src = `../assets/solitaire-saga/su${currentIndex}.png`;
       }
 
       nextButton.addEventListener("click", () => {

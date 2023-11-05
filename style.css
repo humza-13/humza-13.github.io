@@ -328,7 +328,9 @@ section {
   margin-top: 10px;
   margin-left: -10px;
 }
-
+ .footer{
+  margin-top: 50px;
+ }
 .link-btn{
   margin-top: 20px;
   margin-left: -15px;
