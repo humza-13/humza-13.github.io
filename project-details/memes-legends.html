@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Overview</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Muhammad Humza Butt</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../all-projects.html">Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Muhammad Humza Butt</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="../index.html#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="../index.html#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="../all-projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="../index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section id="about">
+        <p class="section__text__p1">Get To Know More About</p>
+        <h1 class="title">Memes & Legends</h1>
+        <div class="section-container">
+          <div>
+          <div class="section__pic-container">
+            <img id = "pimage"
+              src="../assets/memes-legends/m1.png"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="btn-container">
+            <button id="next-button" class="custom-arrow-button" style="background-image: url('../assets/next-arrow.png');"></button>
+          </div>
+          <div class="btn-container">
+            <a href = "https://github.com/humza-13/MemesAndLegends">
+             <button class="btn btn-color-2 project-btn link-btn">
+               Github
+             </button>
+            </a>
+               </div>
+         </div>
+       
+         
+            <div class="text-container">  
+              <br>
+            <h2>Introduction</h2>
+            <p>"Memes & Legends" is an exciting multiplayer turn-based board game designed for desktop platforms using Unity. This game offers a unique and engaging experience where players take control of four distinct characters, each with their own attack and unique ability. With the power to evolve these characters and an innovative approach to character data storage using scriptable objects.</p>
+            <br>
+      <h2>Key Features</h2>
+      <ul>
+          <li><strong>Multiplayer Experience:</strong> "Memes & Legends" offers an immersive multiplayer environment where players can engage in thrilling battles with opponents. Turn-based gameplay ensures that each move is strategic and thought-provoking.</li>
+          <li><strong>Unique Characters:</strong> In this game, players take control of four unique characters, each possessing their own attack and special ability. The diverse abilities of these characters add depth to the gameplay, allowing players to create winning strategies.</li>
+          <li><strong>Character Evolution:</strong> One of the game's defining features is the ability to evolve characters. As players progress, they can enhance their characters' capabilities, making them even more formidable in battle.</li>
+          <li><strong>Scriptable Object Data:</strong> Character data in "Memes & Legends" is stored using scriptable objects, offering an efficient and organized method for managing character attributes. This system allows for easy updates and adjustments to characters and their abilities.</li>
+          <li><strong>Photon SDK for Multiplayer:</strong> The game's multiplayer functionality is powered by the Photon SDK, ensuring smooth and synchronized gameplay experiences for players, even in a turn-based setting.</li>
+      </ul>
+
+      <br>
+      <h2>Technology Stack</h2>
+      <ul>
+          <li>Unity 2D</li>
+          <li>Photon Multiplayer</li>
+          <li>Scriptable Objects</li>
+      </ul>
+
+<br>
+      <h2>Platforms</h2>
+      <ul>
+          <li>Desktop</li>
+      </ul>
+    <br>
+            </div>
+          </div>
+        </div>
+      </section>
+      </main>
+     
+      <footer class = "footer">
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="../index.html#about">About</a></li>
+              <li><a href="../index.html#experience">Experience</a></li>
+              <li><a href="../all-projects.html">Projects</a></li>
+              <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2023 Muhammad Humza Butt. All Rights Reserved.</p>
+      </footer>
+
+    <script src="../script.js"></script>
+    <script>
+      const image = document.getElementById("pimage");
+      const nextButton = document.getElementById("next-button");
+
+      let currentIndex = 1;
+      const maxIndex = 2; // Set this to the number of images in your folder.
+
+      function showImage(index) {
+          if (index < 1) {
+              currentIndex = maxIndex;
+          } else if (index > maxIndex) {
+              currentIndex = 1;
+          }
+          image.src = `../assets/memes-legends/m${currentIndex}.png`;
+      }
+
+      nextButton.addEventListener("click", () => {
+          currentIndex++;
+          showImage(currentIndex);
+      });
+
+      // Initial display of the first image
+      showImage(currentIndex);
+    </script>
+  </body>
+</html>

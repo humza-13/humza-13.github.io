@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Overview</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Muhammad Humza Butt</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../all-projects.html">Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Muhammad Humza Butt</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="../index.html#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="../index.html#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="../all-projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="../index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section id="about">
+        <p class="section__text__p1">Get To Know More About</p>
+        <h1 class="title">Connections</h1>
+        <div class="section-container">
+          <div>
+          <div class="section__pic-container">
+            <img id = "pimage"
+              src="../assets/connections/c1.png"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="btn-container">
+            <button id="next-button" class="custom-arrow-button" style="background-image: url('../assets/next-arrow.png');"></button>
+          </div>
+          <div class="btn-container">
+            <a href = "https://apps.apple.com/cy/app/connections-game-word-puzzle/id6465991134">
+             <button class="btn btn-color-2 project-btn link-btn">
+               IOS
+             </button>
+           </a>
+             </div>
+             <div class="btn-container">
+              <a href = "https://play.google.com/store/apps/details?id=com.megarama.connections&hl=en&gl=US">
+               <button class="btn btn-color-2 project-btn link-btn">
+                 Android
+               </button>
+             </a>
+               </div>
+         </div>
+       
+         
+            <div class="text-container">  
+              <br>
+            <h2>Introduction</h2>
+            <p>"Connections" is an immersive word puzzle game designed for both Android and iOS platforms. As a unity-based mobile game, "Connections" offers a compelling and intellectually stimulating experience for players who enjoy word games and puzzles.</p>
+            <br>
+      <h2>Key Features</h2>
+      <ul>
+          <li><strong>Word Puzzle Challenge:</strong> "Connections" challenges players to explore their vocabulary and puzzle-solving skills by connecting words. The game offers various word puzzles, ensuring a constant intellectual challenge.</li>
+          <li><strong>Intuitive Gameplay:</strong> The game boasts a user-friendly and intuitive interface, making it accessible for players of all ages. The simple mechanic lets players quickly grasp the gameplay and dive into the word challenges.</li>
+          <li><strong>Level-Based Progression:</strong> "Connections" features a structured level system, providing players with a sense of accomplishment as they progress through increasingly complex puzzles. Each level offers new challenges and keeps the gameplay fresh and engaging. Levels are configurable from the backend.</li>
+      </ul>
+
+      <br>
+      <h2>Technology Stack</h2>
+      <ul>
+          <li>Unity 2D</li>
+          <li>Firebase</li>
+          <li>Applovin</li>
+          <li>Google Analytics</li>
+          <li>Cloud Builds</li>
+      </ul>
+
+<br>
+      <h2>Platforms</h2>
+      <ul>
+          <li>Android</li>
+          <li>IOS</li>
+      </ul>
+    <br>
+            </div>
+          </div>
+        </div>
+      </section>
+      </main>
+     
+      <footer class = "footer">
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="../index.html#about">About</a></li>
+              <li><a href="../index.html#experience">Experience</a></li>
+              <li><a href="../all-projects.html">Projects</a></li>
+              <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2023 Muhammad Humza Butt. All Rights Reserved.</p>
+      </footer>
+
+    <script src="../script.js"></script>
+    <script>
+      const image = document.getElementById("pimage");
+      const nextButton = document.getElementById("next-button");
+
+      let currentIndex = 1;
+      const maxIndex = 2; // Set this to the number of images in your folder.
+
+      function showImage(index) {
+          if (index < 1) {
+              currentIndex = maxIndex;
+          } else if (index > maxIndex) {
+              currentIndex = 1;
+          }
+          image.src = `../assets/connections/c${currentIndex}.png`;
+      }
+
+      nextButton.addEventListener("click", () => {
+          currentIndex++;
+          showImage(currentIndex);
+      });
+
+      // Initial display of the first image
+      showImage(currentIndex);
+    </script>
+  </body>
+</html>
