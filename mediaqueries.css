@@ -46,7 +46,7 @@
     margin-top: 0;
   }
 }
-@media screen and (max-width: 1536px) {
+@media screen and (max-width: 1536px), screen and (max-height: 730px) {
   #desktop-nav {
     display: none;
   }
